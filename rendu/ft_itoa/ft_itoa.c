@@ -2,11 +2,11 @@
 #include <stdio.h>
 #include <limits.h>
 
-int	absolute_value(int nbr)
+int absolute_value(int nbr)
 {
 	if (nbr < 0)
-		return (-nbr);
-	return (nbr);
+		return(-nbr);
+	return(nbr);
 }
 
 int get_len(int nbr)
@@ -16,7 +16,7 @@ int get_len(int nbr)
 		len++;
 	while (nbr != 0)
 	{
-		len++;
+		len ++;
 		nbr = nbr / 10;
 	}
 	return (len);
@@ -37,7 +37,7 @@ char *ft_itoa(int nbr)
 		result[0] = '0';
 	while (nbr != 0)
 	{
-		len--;
+		--len;
 		result[len] = absolute_value(nbr % 10) + '0';
 		nbr = nbr / 10;
 	}
